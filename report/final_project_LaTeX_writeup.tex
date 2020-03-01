@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\title{Bye Bye Birdie: Creating a Multiple Linear Regression to Predict the Flight Initiation Distance of the Dark-Eyed Junco (\textit{Junco hymenalis})}
+\author{Omer Lavian}
+\date{February 29, 2020}
+
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+
+\newpage
+\section{Introduction}
+\hspace{1 cm} Anthropogenic change has undoubtedly had an effect on animal behavior \cite{wong_behavioral_2015}. One element of behavior that may be affected by human presence is flight initiation distance (FID). FID is the distance an animal initially moves away from an apparent threat. In birds, previous research has suggested that flight initiation distance is significantly associated with the animal's initial distance from an approaching threat \cite{blumstein_flight-initiation_2003}. Data on initial distance, as well as a variety of other factors, have been taken by the Yeh Lab at UCLA along with FID measurements in a sparrow known as the dark-eyed junco (\textit{Junco hymenalis}). While these data have been analyzed, to my knowledge, they have not been combined in such a way as to allow one to predict the flight initiation distance of a junco given a certain set of factors. My goal, therefore, is to utilize the Yeh Lab's FID data to perform a multiple linear regression which will make possible predictions of FID for this species \cite{noauthor_multiple_nodate}. The overall goal of this project is to gain a better understanding of the ways in which different aspects of urbanization interact to affect flight initiation distance in dark-eyed juncos. 
+  
+
+\section{Methods}
+\hspace{1 cm} This section is incomplete, but overall the project involves quantifying the relationships between different variables and FID and then combining that into a multiple linear regression. To quantify the relationships, I started by making a function that prints the Pearson's correlation coefficient for interval variables that are input into the function and FID. I have also made a function that performs dummy coding on categorical variables with two categories \cite{noauthor_dummy_nodate}.
+
+
+
+
+\lstinputlisting[language=Python, caption=Function comparing FID to other variables., breaklines=true]{corrfunc.py}
+
+\lstinputlisting[language=Python, caption=Function that performs dummy coding on categorical variable with two categories, breaklines=true]{realdummy.py}
+
+
+
+
+
+
+\section{Results}
+\hspace{1cm}The end result of this project will (hopefully) be a multiple linear regression that combines all of the relationships with FID. Ideally, I would like to create a function that takes user input for a variety of factors and prints out a predicted FID.
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{hyello.bib}
+
+
+\end{document}
